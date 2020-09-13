@@ -1,0 +1,20 @@
+<h1 class="header">Home</h1>
+<div class="item" *ngFor="let item of events">
+  <div class="image-container">
+    <img
+      src="https://i.ibb.co/MfkQ9PD/Whats-App-Image-2020-08-15-at-11-30-35-PM.jpg"
+      class="item-image"
+    />
+  </div>
+  <div class="bottom-part">
+    <p class="event-name">{{ item.eventName }}</p>
+    <p class="country">{{ item.address }}</p>
+    <p class="date">{{ item.date }}</p>
+  </div>
+</div>
+<div class="add-more-container" [routerLink]="['/add-event']">
+  <div class="content">
+    <p class="add">+</p>
+    <p class="add">Add More</p>
+  </div>
+</div>

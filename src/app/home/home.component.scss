@@ -1,0 +1,76 @@
+.header {
+  font-size: 40px;
+  padding: 25px 15px 0;
+}
+.item {
+  width: 250px;
+  padding: 0;
+  display: inline-block;
+  margin: 10px;
+
+  .image-container {
+    width: 250px;
+    overflow: hidden;
+    height: 150px;
+
+      img {
+        width: 100%;
+      }
+  }
+  .bottom-part {
+    background: #e95257;
+    padding: 9px;
+    position: relative;
+    color: #fff;
+  }
+  .event-name {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    line-height: 30px;
+  }
+  .country {
+    margin: 0 50px 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+  }
+  .date {
+    position: absolute;
+    bottom: 14px;
+    color: #000;
+    right: 10px;
+    margin: 0;
+    font-weight: 600;
+  }
+}
+.add-more-container {
+  width: 250px;
+  padding: 0;
+  display: inline-flex;
+  margin: 10px;
+  vertical-align: top;
+  background-color: #c4c4c4;
+  height: 233px;
+  font-weight: 800;
+  cursor: pointer;
+
+  .content {
+    margin: auto;
+  }
+
+  .add {
+    margin: 28px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .add-more {
+    margin: 0;
+  }
+}

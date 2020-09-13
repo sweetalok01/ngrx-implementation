@@ -1,0 +1,63 @@
+<h1 class="header">Add Event</h1>
+<mat-card>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Event Name</mat-label>
+        <input
+          matInput
+          placeholder="Event Name"
+          formControlName="eventName"
+          required
+        />
+        <mat-error>
+          Please enter name
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <input
+          matInput
+          placeholder="Address"
+          formControlName="address"
+          required
+        />
+        <mat-error>
+          Please enter Address
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          formControlName="date"
+          required
+          (dateChange)="onchangeDate()"
+        />
+        <mat-error>
+          Please select date
+        </mat-error>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Add</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+<div class="add-more-container" [routerLink]="['/add-event']">
+  <div class="text-center">
+    <h2>Preview</h2>
+  </div>
+  <div class="image-container">
+    <img
+      src="https://i.ibb.co/MfkQ9PD/Whats-App-Image-2020-08-15-at-11-30-35-PM.jpg"
+      class="item-image"
+    />
+  </div>
+  <div class="bottom-part">
+    <p class="event-name">{{ form.value.eventName || "--" }}</p>
+    <p class="country">{{ form.value.address || "--" }}</p>
+    <p class="date">{{ date || "--" }}</p>
+  </div>
+</div>
